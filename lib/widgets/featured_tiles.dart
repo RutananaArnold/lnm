@@ -10,12 +10,16 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/trekking.jpg',
-    'assets/images/animals.jpg',
-    'assets/images/photography.jpeg',
+    'assets/images/appointment.jpg',
+    'assets/images/account_opening.jpg',
+    'assets/images/installing.jpg',
   ];
 
-  final List<String> title = ['Trekking', 'Animals', 'Photography'];
+  final List<String> title = [
+    'Book Appointment',
+    'Account Opening',
+    'Installing Platform'
+  ];
 
   @override
   Widget build(BuildContext context) {

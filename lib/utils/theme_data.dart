@@ -45,3 +45,6 @@ var darkThemeData = ThemeData(
   iconTheme: IconThemeData(color: Colors.blueGrey[200]),
   brightness: Brightness.dark,
 );
+
+const kPrimaryColor = Color(0xFF6F35A5);
+const kPrimaryLightColor = Color(0xFFF1E6FF);

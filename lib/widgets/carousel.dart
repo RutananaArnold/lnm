@@ -27,12 +27,32 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
   ];
 
   final List<String> places = [
-    'ASIA',
-    'AFRICA',
-    'EUROPE',
-    'SOUTH AMERICA',
-    'AUSTRALIA',
-    'ANTARCTICA',
+    'EARN',
+    'DISCOVER',
+    'ABOUT US',
+    'ANALYSIS',
+    'DISCLAIMER',
+    'SMART',
+  ];
+
+  final List<String> quotes = [
+    'EARN',
+    'The Ultimate Trading Experience ' +
+        '\n' +
+        'We assist clients with multiple interactive services into the huge untapped market with a recipe to success. Our methods have been tried and tested by major expert analysts and investment bankers, approving our successful formula. With professional background credibility, We are here to ensure that your financial present and future are on the path to success.',
+    'Trade Confidently' + 
+    '\n' +
+    'We provide honest and professional investment services to all our clients. As a successful Forex Trading Firm, we always put your financial interests first, which allows us to provide you with personalized strategies and professional device. Our priority is helping clients maximize their investments in both the short and long-run.'
+     ,
+    'Maximum  Your Financial' + 
+    '\n' +
+    'We provide all of our clients with services using leading financial principles. The outcome is an extremely diversified, high yield portfolio, strategically designed to optimize risk return ratios as often as possible. We help to analysis various investment options, whether it is trading or more traditional stock market activity.'
+    ,
+    'Please Read' +
+     '\n' +
+     'We offer general trading advice that does not take into consideration your own trading experience, personal objectives and goals, financial means, or risk tolerance. If you have any concerns, we suggest you seek advice from a professional financial advisor. Keep in mind that past performance is no indication of future results.'
+     ,
+    'Smart',
   ];
 
   List<Widget> generateImageTiles(screenSize) {
@@ -82,15 +102,21 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
         AspectRatio(
           aspectRatio: 18 / 8,
           child: Center(
-            child: Text(
-              places[_current],
+            child: Padding( 
+              padding: EdgeInsets.only(
+                  left: screenSize.width / 8,
+                  right: screenSize.width / 8,
+                      ),
+             child: Text(
+              quotes[_current],
               style: TextStyle(
-                letterSpacing: 8,
+                letterSpacing: 5,
                 fontFamily: 'Electrolize',
-                fontSize: screenSize.width / 25,
+                fontSize: screenSize.width / 70,
                 color: Colors.white,
               ),
             ),
+          ),
           ),
         ),
         ResponsiveWidget.isSmallScreen(context)
@@ -159,14 +185,15 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                                       maintainState: true,
                                       visible: _isSelected[i],
                                       child: AnimatedOpacity(
-                                        duration: const Duration(milliseconds: 400),
+                                        duration:
+                                            const Duration(milliseconds: 400),
                                         opacity: _isSelected[i] ? 1 : 0,
                                         child: Container(
                                           height: 5,
                                           decoration: const BoxDecoration(
                                             color: Colors.blueGrey,
                                             borderRadius: BorderRadius.all(
-                                               Radius.circular(10),
+                                              Radius.circular(10),
                                             ),
                                           ),
                                           width: screenSize.width / 10,
